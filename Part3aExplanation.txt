@@ -1,0 +1,2 @@
+mprotect takes the parameters passed to it and uses it as a range to protect the memory pages that fall in this range. It generates a SIGSEGV signal if any process violats its permissions.
+In method 1, mprotect did not throw an error because the 'PROC_EXEC' permission was set. In method 2, since mprotect was commented, 'PROC_EXEC" was not set and code threw an eror because the process tried to access a region with no permission. 

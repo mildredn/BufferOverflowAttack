@@ -1,0 +1,4 @@
+1. With no compile time options, code fails because gcc has stack protection on by deafult and it does not let the program execute the stack.
+2. With stack protection disabled, code still throws error because segmentation fault occurs.
+3. With executable stack disabled, code throws error.
+4. When both executable stack is disabled and stack protection is turned off, the attack can occur easily.
