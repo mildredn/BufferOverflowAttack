@@ -1,0 +1,15 @@
+Script started on Fri 06 Apr 2018 09:05:24 PM EDT
+root@js-157-88:/class/assignment/Submitted# gcc part3a.c -o part3a
+part3a.c: In function ‘main’:
+part3a.c:41:3: warning: passing argument 1 of ‘posix_memalign’ from incompatible pointer type [enabled by default]
+   posix_memalign(&buf, pagesize, strlen(shellcode)+10);
+   ^
+In file included from part3a.c:3:0:
+/usr/include/stdlib.h:503:12: note: expected ‘void **’ but argument is of type ‘char **’
+ extern int posix_memalign (void **__memptr, size_t __alignment, size_t __size)
+            ^
+root@js-157-88:/class/assignment/Submitted# ./part3a
+# 
+# exit
+root@js-157-88:/class/assignment/Submitted# exit
+Script done on Fri 06 Apr 2018 09:05:50 PM EDT

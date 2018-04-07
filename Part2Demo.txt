@@ -1,0 +1,67 @@
+Script started on Fri 06 Apr 2018 08:10:03 PM EDT
+root@js-157-88:/class/assignment/Submitted# as part2.s -o part.o[K[K[Kt2.o
+root@js-157-88:/class/assignment/Submitted# ld part2.o -o part2
+root@js-157-88:/class/assignment/Submitted# ./part2
+# 
+# exit
+root@js-157-88:/class/assignment/Submitted# gdb part1[K2
+GNU gdb (Ubuntu 7.7.1-0ubuntu5~14.04.3) 7.7.1
+Copyright (C) 2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from part2...(no debugging symbols found)...done.
+(gdb) disassembler _stat[Krt
+Undefined command: "disassembler".  Try "help".
+(gdb) disassemle _stat[Krt
+Undefined command: "disassemle".  Try "help".
+(gdb) disassemle _start[1P _start[1P _startb _startl _starte _start
+Dump of assembler code for function _start:
+   0x0000000000400078 <+0>:	xor    %rsi,%rsi
+   0x000000000040007b <+3>:	xor    %rdx,%rdx
+   0x000000000040007e <+6>:	movabs $0x1168732f6e69622f,%rbx
+   0x0000000000400088 <+16>:	shl    $0x8,%rbx
+   0x000000000040008c <+20>:	shr    $0x8,%rbx
+   0x0000000000400090 <+24>:	push   %rbx
+   0x0000000000400091 <+25>:	xor    %rax,%rax
+   0x0000000000400094 <+28>:	mov    $0x3b,%al
+   0x0000000000400096 <+30>:	mov    %rsp,%rdi
+   0x0000000000400099 <+33>:	syscall 
+End of assembler dump.
+(gdb) objdump -d part2
+Undefined command: "objdump".  Try "help".
+(gdb) exit
+Undefined command: "exit".  Try "help".
+(gdb) quit
+root@js-157-88:/class/assignment/Submitted# objdump -d part2
+
+part2:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000400078 <_start>:
+  400078:	48 31 f6             	xor    %rsi,%rsi
+  40007b:	48 31 d2             	xor    %rdx,%rdx
+  40007e:	48 bb 2f 62 69 6e 2f 	movabs $0x1168732f6e69622f,%rbx
+  400085:	73 68 11 
+  400088:	48 c1 e3 08          	shl    $0x8,%rbx
+  40008c:	48 c1 eb 08          	shr    $0x8,%rbx
+  400090:	53                   	push   %rbx
+  400091:	48 31 c0             	xor    %rax,%rax
+  400094:	b0 3b                	mov    $0x3b,%al
+  400096:	48 89 e7             	mov    %rsp,%rdi
+  400099:	0f 05                	syscall 
+root@js-157-88:/class/assignment/Submitted# exit
+exit
+
+Script done on Fri 06 Apr 2018 08:12:41 PM EDT

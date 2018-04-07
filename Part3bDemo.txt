@@ -1,0 +1,81 @@
+Script started on Fri 06 Apr 2018 09:18:59 PM EDT
+root@js-157-88:/class/assignment/Submitted# gcc part3b.c -o parts[K3bi
+part3b.c: In function ‘dumb’:
+part3b.c:31:11: warning: assignment makes integer from pointer without a cast [enabled by default]
+      *hold=filename;
+           ^
+part3b.c: In function ‘main’:
+part3b.c:49:7: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+       printf("\\Length of Input String:%d\\", strlen(string));
+       ^
+root@js-157-88:/class/assignment/Submitted# ./part3bi
+
+
+Error: No Command Line arg for vuln was given
+
+
+Value of Test:7ffc2e7a9ae8
+Value of filename[0]:7ffc2e7a9af0
+The attack buffer is going to need to be a little bit bigger than:ffff8003d1856510
+root@js-157-88:/class/assignment/Submitted# gcc part[K[K[K[K-z exects[K[Kstack part3b.c -o part3bi i
+part3b.c: In function ‘dumb’:
+part3b.c:31:11: warning: assignment makes integer from pointer without a cast [enabled by default]
+      *hold=filename;
+           ^
+part3b.c: In function ‘main’:
+part3b.c:49:7: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+       printf("\\Length of Input String:%d\\", strlen(string));
+       ^
+root@js-157-88:/class/assignment/Submitted# ./part3bii
+
+
+Error: No Command Line arg for vuln was given
+
+
+Value of Test:7ffdfa838628
+Value of filename[0]:7ffdfa838630
+The attack buffer is going to need to be a little bit bigger than:ffff8002057c79d0
+root@js-157-88:/class/assignment/Submitted# gcc -fno-stack-protet[Kctor part3b.c -o part3biii
+part3b.c: In function ‘dumb’:
+part3b.c:31:11: warning: assignment makes integer from pointer without a cast [enabled by default]
+      *hold=filename;
+           ^
+part3b.c: In function ‘main’:
+part3b.c:49:7: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+       printf("\\Length of Input String:%d\\", strlen(string));
+       ^
+root@js-157-88:/class/assignment/Submitted# ./part3biii
+
+
+Error: No Command Line arg for vuln was given
+
+
+Value of Test:7ffe2f9bae78
+Value of filename[0]:7ffe2f9baa70
+The attack buffer is going to need to be a little bit bigger than:2b50
+Segmentation fault (core dumped)
+root@js-157-88:/class/assignment/Submitted# gs[Kcc -z execstack -fno-stack-protecto r part3b.c -o part3biv
+part3b.c: In function ‘dumb’:
+part3b.c:31:11: warning: assignment makes integer from pointer without a cast [enabled by default]
+      *hold=filename;
+           ^
+part3b.c: In function ‘main’:
+part3b.c:49:7: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+       printf("\\Length of Input String:%d\\", strlen(string));
+       ^
+root@js-157-88:/class/assignment/Submitted# ./part3biv
+
+
+Error: No Command Line arg for vuln was given
+
+
+Value of Test:7ffdc6233ee8
+Value of filename[0]:7ffdc6233ae0
+The attack buffer is going to need to be a little bit bigger than:2b50
+# 
+# 
+# exit
+root@js-157-88:/class/assignment/Submitted# exit
+exit
+
+Script done on Fri 06 Apr 2018 09:23:00 PM EDT
